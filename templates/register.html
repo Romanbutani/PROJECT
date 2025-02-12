@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    
+</head>
+<body>
+    <h2 style="font-family: cursive;">Register</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="username" style="padding:30px;font-family: cursive;">Username:</label>
+        <input type="text" name="username" required><br><br>
+        
+        <label for="email" style="padding:47px;font-family: cursive;">Email:</label>
+        <input type="email" name="email" required><br><br>
+        
+        <label for="password"style="padding:32px;font-family: cursive;">Password:</label>
+        <input type="password" name="password" required><br><br>
+        
+        <label for="confirm_password"style="font-family: cursive;">Confirm Password:</label>
+        <input type="password" name="confirm_password" required><br><br>
+
+        <button type="submit"style="padding:4px;font-family: cursive;">Register</button>
+    </form>
+    <br>
+    <a href="{% url 'login' %}"style="font-family: cursive;">Already have an account? Login here</a>
+</body>
+</html>
